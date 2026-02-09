@@ -1,4 +1,4 @@
-# SR Linux - Simple automation examples
+<img width="468" height="10" alt="image" src="https://github.com/user-attachments/assets/bdbfb7ce-6932-4dfe-aac0-d6daeb32f24d" /># SR Linux - Simple automation examples
 
 The goal of this repository is to illustrate with very simple examples the multiple ways available to perform automation tasks, and how to interact with both the Nokia SR Linux YANG model and the OpenConfig YANG model.
 
@@ -71,7 +71,7 @@ All changes have been committed. Leaving candidate mode.
 
 **Enable json-rpc-server (if not using containerlab)**
 
-A node deployed by containerlab will have JSON-RPC enabled, however, when using a phsyical node this needs to be enabled
+A node deployed by containerlab will have JSON-RPC enabled, however, when using a physical node this needs to be enabled
 
 ```bash
 --{ running }--[  ]--
@@ -170,7 +170,7 @@ SR Linux uses port 57400, plus using the --skip-verify flag to skip the TLS conf
 
 **gNMIc: CLI (SRL YANG)**
 
-SRl YANG path: /interface[name=ethernet-1/1]/description
+SRL YANG path: /interface[name=ethernet-1/1]/description
 
 SET command
 
@@ -213,7 +213,7 @@ gnmic -a 172.80.80.12:57400 -u admin -p 'NokiaSrl1!' --skip-verify get --path /i
 
 **gNMIc: JSON input file (SRL YANG)**
 
-SRl YANG path: /interface[name=ethernet-1/1]/description
+SRL YANG path: /interface[name=ethernet-1/1]/description
 
 **One update**
 input file = gnmi-srl-via-json.json
