@@ -386,10 +386,10 @@ gnmic -a 172.80.80.12:57400 -u admin -p 'NokiaSrl1!' --skip-verify get --path op
 
 **gNMIc input file - OpenConfig YANG**
 
-Input file: oc.json
+Input file: gnmi-oc.json
 
 ```bash
-cat oc.json 
+cat gnmi-oc.json 
 {
   "updates": [
       {
@@ -412,7 +412,7 @@ cat oc.json
 ```
 
 ```bash
-gnmic -a 172.80.80.12:57400 -u admin -p 'NokiaSrl1!' --skip-verify set --request-file oc.json
+gnmic -a 172.80.80.12:57400 -u admin -p 'NokiaSrl1!' --skip-verify set --request-file gnmi-oc.json
 {
   "source": "172.80.80.12:57400",
   "timestamp": 1770634998502562583,
