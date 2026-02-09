@@ -1,4 +1,4 @@
-<img width="468" height="10" alt="image" src="https://github.com/user-attachments/assets/bdbfb7ce-6932-4dfe-aac0-d6daeb32f24d" /># SR Linux - Simple automation examples
+# SR Linux - Simple automation examples
 
 The goal of this repository is to illustrate with very simple examples the multiple ways available to perform automation tasks, and how to interact with both the Nokia SR Linux YANG model and the OpenConfig YANG model.
 
