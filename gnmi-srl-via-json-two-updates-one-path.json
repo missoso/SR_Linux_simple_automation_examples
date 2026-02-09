@@ -1,0 +1,13 @@
+{
+  "updates": [
+      {
+          "path": "/interface[name=ethernet-1/1]",
+          "value": {
+              "description": "disable",
+              "admin-state": "disable"
+           },
+           "encoding": "json_ietf"
+      },
+     
+  ]
+ }

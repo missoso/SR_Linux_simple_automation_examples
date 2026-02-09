@@ -1,0 +1,23 @@
+<edit-config xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <target>
+    <candidate/>
+  </target>
+  <config>
+    <interfaces xmlns="http://openconfig.net/yang/interfaces">
+      <interface>
+        <name>ethernet-1/1</name>
+        <config>
+          <name>ethernet-1/1</name>
+          <description>netconf-1-1</description>
+        </config>
+      </interface>
+      <interface>
+        <name>ethernet-1/2</name>
+        <config>
+          <name>ethernet-1/2</name>
+          <description>netconf-1-2</description>
+        </config>
+      </interface>
+    </interfaces>
+  </config>
+</edit-config>

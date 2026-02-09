@@ -1,0 +1,42 @@
+# Copyright 2020 Nokia
+# Licensed under the BSD 3-Clause License.
+# SPDX-License-Identifier: BSD-3-Clause
+
+name: srl-simple-automation
+prefix: ""
+
+mgmt:
+  network: st
+  ipv4-subnet: 172.80.80.0/24
+
+topology:
+  defaults:
+    kind: nokia_srlinux
+
+  kinds:
+    nokia_srlinux:
+      image: ghcr.io/nokia/srlinux:24.10.1
+      type: ixr-d2l
+
+  nodes:
+    ### SPINES ###
+    spine1:
+      type: ixr-d3l
+      group: spine
+      startup-config: configs/fabric/spine1.cfg
+      mgmt-ipv4: 172.80.80.21
+    spine2:
+      type: ixr-d3l
+      group: spine
+      startup-config: configs/fabric/spine2.cfg
+      mgmt-ipv4: 172.80.80.22
+
+    leaf2:
+      startup-config: configs/fabric/leaf2.cfg
+      mgmt-ipv4: 172.80.80.12
+      group: leaf
+    
+
+  links:
+    - endpoints: ["spine1:e1-2", "leaf2:e1-49"]
+    - endpoints: ["spine2:e1-2", "leaf2:e1-50"]

@@ -1,0 +1,18 @@
+{
+  "updates": [
+      {
+          "path": "/interface[name=ethernet-1/1]",
+          "value": {
+              "description": "123"
+           },
+           "encoding": "json_ietf"
+      },
+      {
+          "path": "/interface[name=ethernet-1/2]",
+          "value": {
+              "description": "321"
+           },
+           "encoding": "json_ietf"
+      }
+  ]
+ }
