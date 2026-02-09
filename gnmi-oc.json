@@ -1,0 +1,18 @@
+{
+  "updates": [
+      {
+          "path": "openconfig:/interfaces/interface[name=ethernet-1/1]/config",
+          "value": {
+              "description": "oc 123"
+           },
+           "encoding": "json_ietf"
+      },
+      {
+          "path": "openconfig:/interfaces/interface[name=ethernet-1/2]/config",
+          "value": {
+              "description": "oc 321"
+           },
+           "encoding": "json_ietf"
+      }
+  ]
+}
