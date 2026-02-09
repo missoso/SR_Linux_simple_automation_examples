@@ -175,7 +175,8 @@ SRL YANG path: /interface[name=ethernet-1/1]/description
 SET command
 
 ```bash
-$ gnmic -a 172.80.80.12:57400 -u admin -p 'NokiaSrl1!' --skip-verify set   --update-path /interface[name=ethernet-1/1]/description   --update-value “gnmic-srl-yang”
+gnmic -a 172.80.80.12:57400 -u admin -p 'NokiaSrl1!' --skip-verify set   --update-path /interface[name=ethernet-1/1]/description   --update-value “gnmic-srl-yang”
+
 {
   "source": "172.80.80.12:57400",
   "timestamp": 1770632495402244221,
@@ -194,6 +195,7 @@ GET command
 
 ```bash
 gnmic -a 172.80.80.12:57400 -u admin -p 'NokiaSrl1!' --skip-verify get --path /interface[name=ethernet-1/1]/description --encoding JSON_IETF
+
 [
   {
     "source": "172.80.80.12:57400",
@@ -243,6 +245,7 @@ gnmic set \
   --skip-verify \
   --encoding json_ietf \
   --request-file gnmi-srl-via-json.json
+
 {
   "source": "172.80.80.12:57400",
   "timestamp": 1770632890879410353,
@@ -278,6 +281,7 @@ cat gnmi-srl-via-json-two-updates-one-path.json
 
 ```bash
 gnmic set   -a 172.80.80.12:57400   -u admin   -p 'NokiaSrl1!'   --skip-verify   --encoding json_ietf   --request-file gnmi-srl-via-json-two-updates-one-path.json
+
 {
   "source": "172.80.80.12:57400",
   "timestamp": 1770633802056124100,
@@ -322,6 +326,7 @@ cat gnmi-srl-via-json-two-updates-two-paths.json
 
 ```bash
 gnmic set   -a 172.80.80.12:57400   -u admin   -p 'NokiaSrl1!'   --skip-verify   --encoding json_ietf   --request-file gnmi-srl-via-json-two-updates-two-paths.json
+
 {
   "source": "172.80.80.12:57400",
   "timestamp": 1770634152375439321,
@@ -349,6 +354,7 @@ SET command
 
 ```bash
 gnmic -a 172.80.80.12:57400 -u admin -p 'NokiaSrl1!' --skip-verify set   --update-path openconfig:/interfaces/interface[name=ethernet-1/1]/config/description   --update-value “OC”
+
 {
   "source": "172.80.80.12:57400",
   "timestamp": 1770634610918624927,
@@ -367,6 +373,7 @@ GET command
 
 ```bash
 gnmic -a 172.80.80.12:57400 -u admin -p 'NokiaSrl1!' --skip-verify get --path openconfig:/interfaces/interface[name=ethernet-1/1]/config/description --encoding JSON_IETF
+
 [
   {
     "source": "172.80.80.12:57400",
@@ -413,6 +420,7 @@ cat gnmi-oc.json
 
 ```bash
 gnmic -a 172.80.80.12:57400 -u admin -p 'NokiaSrl1!' --skip-verify set --request-file gnmi-oc.json
+
 {
   "source": "172.80.80.12:57400",
   "timestamp": 1770634998502562583,
